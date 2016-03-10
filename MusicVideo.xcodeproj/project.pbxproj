@@ -13,6 +13,8 @@
 		9B0464141C89F3760001E7BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0464131C89F3760001E7BB /* Assets.xcassets */; };
 		9B0464171C89F3760001E7BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B0464151C89F3760001E7BB /* LaunchScreen.storyboard */; };
 		9B517CE61C8A041300A01BF8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B517CE51C8A041300A01BF8 /* APIManager.swift */; };
+		9B677E8E1C91FA690094D85A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B677E8D1C91FA690094D85A /* Constants.swift */; };
+		9B677E901C91FE390094D85A /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B677E8F1C91FE390094D85A /* MusicVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B0464161C89F3760001E7BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B0464181C89F3760001E7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B517CE51C8A041300A01BF8 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		9B677E8D1C91FA690094D85A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9B677E8F1C91FE390094D85A /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		9B04640B1C89F3760001E7BB /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				9B677E8C1C91FA530094D85A /* Utils */,
 				9B517CE41C89F91D00A01BF8 /* Supporting Files */,
 				9B517CE11C89F8DA00A01BF8 /* Model */,
 				9B517CE21C89F8E800A01BF8 /* Controller */,
@@ -67,6 +72,7 @@
 		9B517CE11C89F8DA00A01BF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B677E8F1C91FE390094D85A /* MusicVideo.swift */,
 				9B517CE51C8A041300A01BF8 /* APIManager.swift */,
 			);
 			name = Model;
@@ -97,6 +103,14 @@
 				9B0464181C89F3760001E7BB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B677E8C1C91FA530094D85A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9B677E8D1C91FA690094D85A /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +186,9 @@
 			files = (
 				9B517CE61C8A041300A01BF8 /* APIManager.swift in Sources */,
 				9B04640F1C89F3760001E7BB /* ViewController.swift in Sources */,
+				9B677E901C91FE390094D85A /* MusicVideo.swift in Sources */,
 				9B04640D1C89F3760001E7BB /* AppDelegate.swift in Sources */,
+				9B677E8E1C91FA690094D85A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
