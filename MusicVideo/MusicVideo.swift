@@ -16,6 +16,14 @@ class Videos {
     private var _vImageUrl:String
     private var _vVideoUrl:String
     
+    private var _vRights:String
+    private var _vPrice:String
+    private var _vArtist:String
+    private var _vImid:String
+    private var _vGenre:String
+    private var _vLinkToiTunes:String
+    private var _vReleaseDate:String
+    
     //Make a getter
     
     var vName: String{
@@ -29,6 +37,38 @@ class Videos {
     var vVideoUrl: String {
         return _vVideoUrl
     }
+    
+    var vRights: String {
+        return _vRights
+    }
+    
+    var vPrice: String {
+        return _vPrice
+    }
+    
+    var vArtist: String {
+        return _vArtist
+    }
+    
+    var vImid: String {
+        return _vImid
+    }
+    
+    var vGenre: String {
+        return _vGenre
+    }
+    
+    var vLinkToiTunes: String {
+        return _vLinkToiTunes
+    }
+    
+    var vReleaseDate:String{
+        return _vReleaseDate
+    }
+    
+    
+    
+    
     
     init (data: JSONDictionary){
         
@@ -69,6 +109,85 @@ class Videos {
             _vVideoUrl = ""
         }
         
+        
+        // The Studio Name
+        
+        if let rights = data["rights"] as? JSONDictionary,
+            vRights = rights["label"] as? String {
+                self._vRights = vRights
+        }
+        else {
+            _vRights = ""
+        }
+        
+        
+        // Price of Video
+        
+        if let price = data["im:price"] as? JSONDictionary,
+            vPrice = price["label"] as? String {
+                self._vPrice = vPrice
+        }
+        else {
+            _vPrice = ""
+        }
+        
+        // The Artist ID for iTunes Search API
+        if let imid = data["id"] as? JSONDictionary,
+            vid = imid["attributes"] as? JSONDictionary,
+            vImid = vid["im:id"] as? String{
+                self._vImid = vImid
+        }
+        else
+        {
+        
+            _vImid = ""
+        }
+        
+        
+        //The Artist name
+        if let artist = data["im:artist"] as? JSONDictionary,
+            vArtist = artist["label"] as? String {
+                self._vArtist = vArtist
+        }
+        else
+        {
+            _vArtist = ""
+        }
+        
+        
+        //The Genre
+        
+        if let genre = data["category"] as? JSONDictionary,
+            rel2 = genre["attributes"] as? JSONDictionary,
+            vGenre = rel2["term"] as? String {
+                self._vGenre = vGenre
+        }
+        else {
+            _vGenre = ""
+        }
+        
+        //Video link to iTunes
+        if let release2 = data["id"] as? JSONDictionary,
+            vLinkToiTunes = release2["label"] as? String {
+                self._vLinkToiTunes = vLinkToiTunes
+        }
+        else
+        {
+            _vLinkToiTunes = ""
+        }
+        
+        
+        //The Release Date
+        
+        if let release2 = data["im:releaseDate"] as? JSONDictionary,
+            rel2 = release2["attributes"] as? JSONDictionary,
+            vReleaseDate = rel2["label"] as? String {
+                self._vReleaseDate = vReleaseDate
+        }
+        else
+        {
+            _vReleaseDate = ""
+        }
         
     }
 }
